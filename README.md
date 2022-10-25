@@ -7,7 +7,8 @@ trojan client with privoxy for http proxy
 ```bash
 docker run -dit --restart always\
     --name trojan-proxy \
-    -e REMOTE_ADDR="your host" \
+    -e REMOTE_ADDR="server host" \
+    -e REMOTE_PORT="server port" \
     -e PASSWORD="your password" \
     -e VERIFY=false \
     -p trojan_port:1086 \
